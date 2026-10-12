@@ -160,5 +160,221 @@
   "ok": true,
   "itemsFound": 1,
   "error": null
+ },
+ {
+  "sourceId": "gov-dnc",
+  "name": "মাদকদ্রব্য নিয়ন্ত্রণ অধিদপ্তর",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-cpa",
+  "name": "চট্টগ্রাম বন্দর কর্তৃপক্ষ",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-mpa",
+  "name": "মোংলা বন্দর কর্তৃপক্ষ",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-dscc",
+  "name": "ঢাকা দক্ষিণ সিটি কর্পোরেশন",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-dncc",
+  "name": "ঢাকা উত্তর সিটি কর্পোরেশন",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-bpdb",
+  "name": "বাংলাদেশ বিদ্যুৎ উন্নয়ন বোর্ড",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-ansarvdp",
+  "name": "আনসার ও গ্রাম প্রতিরক্ষা বাহিনী",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-baec",
+  "name": "বাংলাদেশ পরমাণু শক্তি কমিশন",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-rooppur",
+  "name": "রূপপুর পারমাণবিক বিদ্যুৎ কেন্দ্র",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-bcic",
+  "name": "বাংলাদেশ কেমিক্যাল ইন্ডাস্ট্রিজ কর্পোরেশন",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-petrobangla",
+  "name": "পেট্রোবাংলা",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-biwta",
+  "name": "বাংলাদেশ অভ্যন্তরীণ নৌ-পরিবহন কর্তৃপক্ষ",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-dgme",
+  "name": "স্বাস্থ্য শিক্ষা অধিদপ্তর",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-dmc",
+  "name": "ঢাকা মেডিকেল কলেজ",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "gov-nipsom",
+  "name": "জাতীয় প্রতিষেধক ও সামাজিক চিকিৎসা প্রতিষ্ঠান (নিপসম)",
+  "lastRunAt": "2026-10-12T10:33:51.486Z",
+  "lastSuccessAt": "2026-10-12T10:33:51.486Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "army",
+  "name": "বাংলাদেশ সেনাবাহিনী (join.army.mil.bd)",
+  "lastRunAt": "2026-10-12T10:34:32.556Z",
+  "lastSuccessAt": "2026-10-12T10:34:32.556Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "evercare-dhaka",
+  "name": "Evercare Hospital Dhaka",
+  "lastRunAt": "2026-10-12T10:37:08.623Z",
+  "lastSuccessAt": "2026-10-12T10:37:08.623Z",
+  "ok": true,
+  "itemsFound": 1,
+  "error": null
+ },
+ {
+  "sourceId": "evercare-chattogram",
+  "name": "Evercare Hospital Chattogram",
+  "lastRunAt": "2026-10-12T10:37:08.623Z",
+  "lastSuccessAt": "2026-10-12T10:37:08.623Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "ibnsina",
+  "name": "The Ibn Sina Trust (e-Recruitment)",
+  "lastRunAt": "2026-10-12T10:37:08.623Z",
+  "lastSuccessAt": "2026-10-12T10:37:08.623Z",
+  "ok": true,
+  "itemsFound": 2,
+  "error": null
+ },
+ {
+  "sourceId": "birdem",
+  "name": "BIRDEM (Diabetic Association)",
+  "lastRunAt": "2026-10-12T10:38:08.084Z",
+  "lastSuccessAt": "2026-10-12T10:38:08.084Z",
+  "ok": true,
+  "itemsFound": 3,
+  "error": null
+ },
+ {
+  "sourceId": "brb",
+  "name": "BRB Hospitals",
+  "lastRunAt": "2026-10-12T10:37:08.623Z",
+  "lastSuccessAt": "2026-10-12T10:37:08.623Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "icddrb",
+  "name": "icddr,b",
+  "lastRunAt": "2026-10-12T10:39:12.925Z",
+  "lastSuccessAt": "2026-10-12T10:39:12.925Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "unfpa-bd",
+  "name": "UNFPA Bangladesh",
+  "lastRunAt": "2026-10-12T10:39:12.925Z",
+  "lastSuccessAt": "2026-10-12T10:39:12.925Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
+ },
+ {
+  "sourceId": "who-bd",
+  "name": "WHO Bangladesh",
+  "lastRunAt": "2026-10-12T10:39:12.925Z",
+  "lastSuccessAt": "2026-10-12T10:39:12.925Z",
+  "ok": true,
+  "itemsFound": 0,
+  "error": null
  }
 ]

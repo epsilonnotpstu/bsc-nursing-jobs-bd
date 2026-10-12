@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/layout/Header";
 import { T } from "@/lib/i18n";
+import { SUBMIT_URL } from "@/lib/site";
 
 const SECTION_LINKS = [
   { href: "/category/govt-health", bn: "সরকারি চাকরি", en: "Government jobs" },
@@ -66,6 +67,11 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a href={SUBMIT_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                  <T bn="সার্কুলার জমা দিন" en="Submit a circular" />
+                </a>
+              </li>
             </ul>
           </div>
 

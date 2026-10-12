@@ -1,0 +1,30 @@
+name: সার্কুলার জমা দিন / Submit a circular
+description: Facebook বা অন্য কোথাও দেখা নার্সিং চাকরির সার্কুলার জমা দিন। Admin "approved" লেবেল দিলে AI পড়ে সাইটে যোগ করবে।
+title: "[Circular] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        সার্কুলারের লেখা কপি-পেস্ট করুন অথবা ছবি/স্ক্রিনশট নিচের বক্সে টেনে আনুন। Paste the text or drag the circular image/screenshot below.
+  - type: input
+    id: source_url
+    attributes:
+      label: পোস্ট বা সার্কুলারের লিংক / Link
+      placeholder: https://www.facebook.com/groups/...
+    validations:
+      required: false
+  - type: input
+    id: source_name
+    attributes:
+      label: কোথায় দেখেছেন / Where did you see it?
+      placeholder: Nursing Job Circular and Exam Preparation (Facebook group)
+    validations:
+      required: false
+  - type: textarea
+    id: content
+    attributes:
+      label: সার্কুলারের লেখা বা ছবি / Circular text or image
+      description: যত বেশি তথ্য, তত ভালো — প্রতিষ্ঠান, পদ, শেষ তারিখ, আবেদনের লিংক।
+    validations:
+      required: true

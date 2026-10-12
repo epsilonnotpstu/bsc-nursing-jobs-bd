@@ -6,7 +6,7 @@ on:
     branches: [main]
   # Data commits made by the scraper's GITHUB_TOKEN don't fire `push`, so also run after it.
   workflow_run:
-    workflows: ["Scrape nursing opportunities"]
+    workflows: ["Scrape nursing opportunities", "Process circular submission"]
     types: [completed]
   workflow_dispatch:
 

@@ -17,7 +17,8 @@ export async function fetchWithRetry(url: string, opts: FetchOptions = {}): Prom
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const res = await fetch(url, {
-        headers: { "User-Agent": UA, "Accept-Language": "bn,en;q=0.8", ...headers },
+        // Some hospital sites return 406 without a browser-like Accept header.
+        headers: { "User-Agent": UA, Accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8", "Accept-Language": "bn,en;q=0.8", ...headers },
         signal: AbortSignal.timeout(timeoutMs),
         redirect: "follow",
       });

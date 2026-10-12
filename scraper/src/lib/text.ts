@@ -23,8 +23,8 @@ export function cleanText(s: string | null | undefined): string {
 const NURSING_RE =
   /\bnurs(e|es|ing)\b|\bmidwi(fe|ves|fery)\b|\bBSN\b|নার্স|নার্সিং|মিডওয়াইফ|মিডওয়াইফ|ধাত্রী|সেবিকা|সেবক/i;
 
-/** Titles that contain "nurse"-like words but are not nursing jobs. */
-const NOT_NURSING_RE = /\bnursery\b|নার্সারি/i;
+/** Titles that contain "nurse"-like words but are not jobs for registered nurses. */
+const NOT_NURSING_RE = /\bnursery\b|নার্সারি|নার্সারী|nursing attendant|নার্সিং এ্যাটেনডেন্ট|নার্সিং অ্যাটেনডেন্ট|নার্সিং এটেনডেন্ট/i;
 
 export function isNursingText(s: string): boolean {
   return NURSING_RE.test(s) && !NOT_NURSING_RE.test(s);
@@ -71,7 +71,7 @@ export function isoDate(y: number, m: number, d: number): string | null {
   return `${y}-${pad(m)}-${pad(d)}`;
 }
 
-/** Parse "Nov 10, 2026", "10/4/2026" (M/D/Y), "2026-10-12", "১২-১০-২০২৬" (D-M-Y). */
+/** Parse "Nov 10, 2026", "10-Oct-2026", "10/4/2026" (M/D/Y), "2026-10-12", "১২-১০-২০২৬" (D-M-Y). */
 export function parseDate(input: string | null | undefined, slashOrder: "MDY" | "DMY" = "MDY"): string | null {
   if (!input) return null;
   const s = bnToEnDigits(input).trim();
@@ -79,7 +79,7 @@ export function parseDate(input: string | null | undefined, slashOrder: "MDY" | 
   if (m) return isoDate(+m[1], +m[2], +m[3]);
   m = s.match(/([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2}),?\s+(\d{4})/);
   if (m && MONTHS[m[1].toLowerCase()]) return isoDate(+m[3], MONTHS[m[1].toLowerCase()], +m[2]);
-  m = s.match(/(\d{1,2})\s+([A-Za-z]{3})[a-z]*,?\s+(\d{4})/);
+  m = s.match(/(\d{1,2})[\s-]+([A-Za-z]{3})[a-z]*[\s,-]+(\d{4})/);
   if (m && MONTHS[m[2].toLowerCase()]) return isoDate(+m[3], MONTHS[m[2].toLowerCase()], +m[1]);
   m = s.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
   if (m) return slashOrder === "MDY" ? isoDate(+m[3], +m[1], +m[2]) : isoDate(+m[3], +m[2], +m[1]);

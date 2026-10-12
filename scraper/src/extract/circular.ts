@@ -79,7 +79,7 @@ async function pdfText(bytes: Uint8Array, maxPages = 10): Promise<string> {
   return out;
 }
 
-const PROMPT = `You read Bangladeshi job/exam notices (Bangla or English; may be scanned).
+export const PROMPT = `You read Bangladeshi job/exam notices (Bangla or English; may be scanned).
 Return ONLY JSON with this shape:
 {
  "title": string,                       // notice title, Bangla unicode if the notice is Bangla
@@ -97,7 +97,7 @@ Return ONLY JSON with this shape:
 bscEligible rules: "yes" if BSc/B.Sc in Nursing (or Bachelor in nursing, Post-basic BSc) is accepted; "diploma_min" if the minimum is Diploma in Nursing (BSc not mentioned); "no" if only midwifery/other non-nursing qualification; "unknown" if not stated.
 Copy salary/age text as written. Convert Bangla digits in dates to YYYY-MM-DD. Do not guess missing values: use null.`;
 
-interface GeminiCircular {
+export interface GeminiCircular {
   title?: string;
   organization?: string;
   noticeType?: NoticeType;
@@ -129,7 +129,7 @@ function validCount(n: unknown): number | null {
 
 const str = (s: unknown) => (typeof s === "string" && s.trim() ? s.trim() : null);
 
-function normalize(g: GeminiCircular, now: string, attempts: number): CircularExtraction {
+export function normalize(g: GeminiCircular, now: string, attempts: number): CircularExtraction {
   const nursePosts: ExtractedPost[] = (g.nursePosts ?? [])
     .filter((p) => str(p.name))
     .map((p) => ({

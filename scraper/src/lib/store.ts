@@ -30,6 +30,8 @@ function sameEvent(a: LifecycleEvent, b: LifecycleEvent) {
   return a.type === b.type && (a.url ?? a.title) === (b.url ?? b.title);
 }
 
+const STALE_AFTER_DAYS = 60;
+
 const CONTENT_KEYS: (keyof Opportunity)[] = [
   "title", "titleBn", "organization", "posts", "totalVacancies", "deadline", "examDate",
   "applyUrl", "circularUrl", "bscEligible", "section", "salary",
@@ -80,8 +82,11 @@ export function mergeItems(
 
   // Lifecycle bookkeeping for items not returned this run.
   const today = todayDhaka();
+  // Notices without a deadline stay on notice boards for months; treat them as old after this.
+  const staleBefore = new Date(Date.parse(today) - STALE_AFTER_DAYS * 86_400_000).toISOString().slice(0, 10);
   for (const [id, o] of byId) {
-    if (o.deadline && o.deadline < today && o.status === "active") {
+    const stale = !o.deadline && o.publishedAt !== null && o.publishedAt < staleBefore;
+    if (((o.deadline && o.deadline < today) || stale) && o.status === "active") {
       byId.set(id, { ...o, status: "expired", updatedAt: now });
     } else if (!seen.has(id) && okSourceIds.has(o.sourceId) && o.status === "active" && !o.deadline) {
       // Source worked but no longer lists it and it has no deadline: treat as closed.

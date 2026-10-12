@@ -6,6 +6,7 @@ import OpportunityExplorer from "@/components/opportunity/OpportunityExplorer";
 import { generatedAt, opportunities, sectionCounts, sourceHealth, toRows, toSlug } from "@/lib/data";
 import { DateT, NumT, T } from "@/lib/i18n";
 import { KIND_LABEL } from "@/lib/labels";
+import { SUBMIT_URL } from "@/lib/site";
 
 export default function Home() {
   const counts = sectionCounts();
@@ -111,6 +112,23 @@ export default function Home() {
               <CategoryCard key={s.slug} section={s} count={counts[s.slug] ?? 0} />
             ))}
           </div>
+        </section>
+
+        <section className="flex flex-col items-start gap-3 rounded-2xl border border-brand-200 bg-brand-50 p-5 sm:flex-row sm:items-center sm:justify-between dark:border-navy-700 dark:bg-navy-800">
+          <div>
+            <h2 className="font-semibold text-navy-900 dark:text-white">
+              <T bn="Facebook গ্রুপে কোনো সার্কুলার দেখেছেন?" en="Seen a circular in a Facebook group?" />
+            </h2>
+            <p className="text-sm text-slate-600 dark:text-slate-300">
+              <T
+                bn="লেখা বা ছবি জমা দিন — যাচাইয়ের পর AI পড়ে এখানে যোগ করবে।"
+                en="Submit the text or image — after review, AI reads it and adds it here."
+              />
+            </p>
+          </div>
+          <a href={SUBMIT_URL} target="_blank" rel="noopener noreferrer" className="shrink-0 rounded-xl bg-navy-800 px-5 py-2.5 text-sm font-semibold text-white hover:bg-navy-700">
+            <T bn="সার্কুলার জমা দিন" en="Submit a circular" />
+          </a>
         </section>
 
         {updates.length > 0 && (

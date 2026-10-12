@@ -2308,5 +2308,101 @@
   "deadline": "2026-05-25",
   "examDate": null,
   "applicationFee": null
+ },
+ "https://www.birdembd.org/uploads/notice/BNC-Circular-2026_1791616246.jpeg": {
+  "status": "error",
+  "method": "text_prefilter",
+  "attempts": 3,
+  "extractedAt": "2026-10-12T10:38:08.084Z",
+  "error": "not a PDF",
+  "title": null,
+  "organization": null,
+  "noticeType": "other",
+  "nursePosts": [],
+  "applicationStart": null,
+  "deadline": null,
+  "examDate": null,
+  "applicationFee": null
+ },
+ "https://www.birdembd.org/uploads/notice/Circular-06.05.2026_1776264800.JPG": {
+  "status": "error",
+  "method": "text_prefilter",
+  "attempts": 3,
+  "extractedAt": "2026-10-12T10:38:08.084Z",
+  "error": "not a PDF",
+  "title": null,
+  "organization": null,
+  "noticeType": "other",
+  "nursePosts": [],
+  "applicationStart": null,
+  "deadline": null,
+  "examDate": null,
+  "applicationFee": null
+ },
+ "https://www.birdembd.org/uploads/notice/circular-06.05.2026_1775448011.pdf": {
+  "status": "nursing",
+  "method": "gemini",
+  "attempts": 1,
+  "extractedAt": "2026-10-12T10:37:08.623Z",
+  "title": "Employment Notice",
+  "organization": "BIRDEM GENERAL HOSPITAL",
+  "noticeType": "recruitment",
+  "nursePosts": [
+   {
+    "name": "Senior Staff Nurse",
+    "count": null,
+    "qualification": "BSc in Nursing.",
+    "salary": "Tk. 16000-38640/- & all other admissible allowances.",
+    "ageLimit": "32 years as on 30.06.2026.",
+    "bscEligible": "yes"
+   }
+  ],
+  "applicationStart": null,
+  "deadline": "2026-04-30",
+  "examDate": null,
+  "applicationFee": "Tk. 500/- for Sl. # 1-4 & Tk. 300/- for Sl. # 5"
+ },
+ "https://www.birdembd.org/uploads/notice/BNC_1772332851.jpeg": {
+  "status": "error",
+  "method": "text_prefilter",
+  "attempts": 3,
+  "extractedAt": "2026-10-12T10:38:08.084Z",
+  "error": "not a PDF",
+  "title": null,
+  "organization": null,
+  "noticeType": "other",
+  "nursePosts": [],
+  "applicationStart": null,
+  "deadline": null,
+  "examDate": null,
+  "applicationFee": null
+ },
+ "https://www.birdembd.org/uploads/notice/JOB-CIRCULAR-28.01.2026_1769575431.pdf": {
+  "status": "not_nursing",
+  "method": "text_prefilter",
+  "attempts": 1,
+  "extractedAt": "2026-10-12T10:37:08.623Z",
+  "title": null,
+  "organization": null,
+  "noticeType": "other",
+  "nursePosts": [],
+  "applicationStart": null,
+  "deadline": null,
+  "examDate": null,
+  "applicationFee": null
+ },
+ "https://www.birdembd.org/uploads/notice/Admin-circular-04-november-2025_1762227816.pdf": {
+  "status": "not_nursing",
+  "method": "text_prefilter",
+  "attempts": 1,
+  "extractedAt": "2026-10-12T10:37:08.623Z",
+  "title": null,
+  "organization": null,
+  "noticeType": "other",
+  "nursePosts": [],
+  "applicationStart": null,
+  "deadline": null,
+  "examDate": null,
+  "applicationFee": null
  }
 }

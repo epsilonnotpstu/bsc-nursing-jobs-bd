@@ -44,7 +44,38 @@ function byUrgency(a: Opportunity, b: Opportunity) {
   return (b.publishedAt ?? b.firstSeenAt).localeCompare(a.publishedAt ?? a.firstSeenAt);
 }
 
-export const opportunities: Opportunity[] = file.items.filter(isListed).sort(byUrgency);
+const TRUST_RANK = { A1: 0, A2: 1, B: 2, C: 3, D: 4 } as const;
+
+const normOrg = (s: string) =>
+  s.toLowerCase().replace(/\b(the|plc|ltd|limited|p\.l\.c)\b|[^a-z0-9\u0980-\u09ff]+/g, " ").replace(/\s+/g, " ").trim();
+const normTitle = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/\((male|female) only\)/g, " ")
+    .replace(/[^a-z0-9\u0980-\u09ff]+/g, " ")
+    .trim();
+
+/**
+ * The same job often arrives from several sources (e.g. bdjobs and the hospital's own site).
+ * Group by organization + title + deadline and keep only the most trustworthy source.
+ */
+function dedupe(items: Opportunity[]): Opportunity[] {
+  const groups = new Map<string, Opportunity[]>();
+  for (const o of items) {
+    const key = `${normOrg(o.organization)}|${normTitle(o.title)}|${o.deadline ?? o.id}`;
+    groups.set(key, [...(groups.get(key) ?? []), o]);
+  }
+  return [...groups.values()].flatMap((g) => {
+    const best = Math.min(...g.map((o) => TRUST_RANK[o.trust]));
+    // Keep a known eligibility from a less-trusted copy if the official one doesn't state it.
+    const known = g.find((o) => o.bscEligible !== "unknown")?.bscEligible;
+    return g
+      .filter((o) => TRUST_RANK[o.trust] === best)
+      .map((o) => (o.bscEligible === "unknown" && known ? { ...o, bscEligible: known } : o));
+  });
+}
+
+export const opportunities: Opportunity[] = dedupe(file.items.filter(isListed)).sort(byUrgency);
 
 export function getBySection(section: SectionSlug): Opportunity[] {
   return opportunities.filter((o) => o.section === section);

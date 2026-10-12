@@ -3,13 +3,24 @@
 
 import type { SourceHealth } from "@bsc-nursing/shared";
 import { aiBudget, loadCache, saveCache } from "./extract/circular";
-import { loadOpportunities, mergeItems, saveHealth, saveOpportunities, type ScrapedItem } from "./lib/store";
+import { loadOpportunities, mergeItems, readJson, saveHealth, saveOpportunities, type ScrapedItem } from "./lib/store";
+import { army } from "./sources/army";
 import { bdjobs } from "./sources/bdjobs";
 import { govPortalSources } from "./sources/govPortal";
+import { hospitalSources } from "./sources/hospitals";
+import { ngoSources } from "./sources/ngo";
 import { teletalk } from "./sources/teletalk";
 import type { Source } from "./sources/types";
+import { SUBMISSIONS_FILE } from "./submissions";
 
-const ALL_SOURCES: Source[] = [teletalk, bdjobs, ...govPortalSources];
+/** Admin-approved community submissions (see .github/workflows/submission.yml). */
+const submissions: Source = {
+  id: "submission",
+  name: "কমিউনিটি থেকে জমা দেওয়া সার্কুলার",
+  run: async () => readJson<ScrapedItem[]>(SUBMISSIONS_FILE, []),
+};
+
+const ALL_SOURCES: Source[] = [teletalk, bdjobs, army, ...hospitalSources, ...ngoSources, ...govPortalSources, submissions];
 
 async function main() {
   const only = process.argv.find((a) => a.startsWith("--only="))?.slice(7).split(",");
