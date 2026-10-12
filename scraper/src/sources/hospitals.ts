@@ -90,7 +90,8 @@ const ibnSina: Source = {
   async run() {
     const base: Base = { sourceId: "ibnsina", organization: "The Ibn Sina Trust", organizationBn: "ইবনে সিনা ট্রাস্ট", section: "private-hospital" };
     const listUrl = "https://career.ibnsinatrust.com/ist/r/ist/e-recruitment/available-circular";
-    const $ = cheerio.load(await getText(listUrl));
+    // Slow from outside Bangladesh (GitHub runners), so allow more time.
+    const $ = cheerio.load(await getText(listUrl, { timeoutMs: 90_000 }));
     const items: ScrapedItem[] = [];
     $("table tr").each((_, tr) => {
       const td = $(tr).find("td");
