@@ -34,5 +34,8 @@ jobs:
           git config user.name "nursing-jobs-bot"
           git config user.email "nursing-jobs-bot@users.noreply.github.com"
           git add data
-          git diff --cached --quiet || git commit -m "data: update $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+          git diff --cached --quiet && exit 0
+          git commit -m "data: update $(date -u +%Y-%m-%dT%H:%MZ)"
+          # Someone may have pushed code while the agent ran; replay the data commit on top.
+          for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 10; done
+          exit 1

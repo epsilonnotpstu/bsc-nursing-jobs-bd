@@ -2,7 +2,9 @@ node_modules/
 .next/
 .env
 .env.*
-!.env.example
 *.log
 .DS_Store
 # data/ (including data/cache/extractions.json) IS committed: it is the agent's output and AI cache.
+.vercel
+.env*
+!.env.example
