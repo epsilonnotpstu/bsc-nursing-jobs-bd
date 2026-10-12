@@ -1,131 +1,50 @@
-"use client";
-
-import { useState } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { SECTIONS } from "@bsc-nursing/shared";
+import PageHeader from "@/components/layout/PageHeader";
+import { T } from "@/lib/i18n";
+
+export const metadata: Metadata = {
+  title: "নোটিফিকেশন · Notifications",
+  description: "নতুন চাকরি, শেষ তারিখ ও পরীক্ষার নোটিফিকেশন। Alerts for new jobs, deadlines and exams.",
+};
+
+const PLANNED = [
+  { bn: "আপনার পছন্দের সেকশনে নতুন চাকরি এলে", en: "New jobs in the sections you choose" },
+  { bn: "আবেদনের শেষ তারিখের ৭, ৩ ও ১ দিন আগে", en: "7, 3 and 1 days before an application deadline" },
+  { bn: "প্রবেশপত্র, পরীক্ষার তারিখ ও ফলাফল প্রকাশ হলে", en: "When admit cards, exam dates and results are published" },
+];
 
 export default function SubscribePage() {
-  const [email, setEmail] = useState("");
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [submitted, setSubmitted] = useState(false);
-
-  function toggleCategory(id: string) {
-    setSelectedCategories((prev) =>
-      prev.includes(id) ? prev.filter((c) => c !== id) : [...prev, id]
-    );
-  }
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSubmitted(true);
-  }
-
-  if (submitted) {
-    return (
-      <div className="px-4 py-16">
-        <div className="mx-auto max-w-md text-center">
-          <div className="mb-4 text-6xl">✅</div>
-          <h1 className="mb-2 text-2xl font-bold text-slate-900 dark:text-slate-100">
-            সাবস্ক্রাইব সফল!
-          </h1>
-          <p className="mb-6 text-slate-500 dark:text-slate-400">
-            আপনার ইমেইলে নতুন চাকরির নোটিফিকেশন পাঠানো হবে। ধন্যবাদ!
-          </p>
-          <Link
-            href="/"
-            className="rounded-xl bg-cyan-600 px-6 py-3 text-sm font-semibold text-white hover:bg-cyan-700"
-          >
-            হোমে ফিরে যান
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="px-4 py-8">
-      <div className="mx-auto max-w-lg">
-        <nav className="mb-6 text-sm text-slate-500">
-          <Link href="/" className="hover:text-cyan-600">হোম</Link>
-          <span className="mx-2">/</span>
-          <span className="text-slate-900 dark:text-slate-100">সাবস্ক্রাইব</span>
-        </nav>
-
-        <h1 className="mb-2 text-2xl font-bold text-slate-900 dark:text-slate-100">
-          নোটিফিকেশন সাবস্ক্রাইব করুন
-        </h1>
-        <p className="mb-8 text-slate-500 dark:text-slate-400">
-          নতুন চাকরি পোস্ট হলে, আবেদনের শেষ তারিখ কাছে আসলে, বা পরীক্ষার
-          তারিখ ঠিক হলে আমরা আপনাকে জানাবো। সম্পূর্ণ বিনামূল্যে।
-        </p>
-
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300">
-              ইমেইল ঠিকানা
-            </label>
-            <input
-              id="email"
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com"
-              className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 focus:outline-none dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:focus:ring-cyan-800"
-            />
-          </div>
-
-          <div>
-            <p className="mb-3 text-sm font-medium text-slate-700 dark:text-slate-300">
-              কোন ক্যাটাগরির চাকরি চান? (ঐচ্ছিক)
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {SECTIONS.map((cat) => (
-                <button
-                  key={cat.slug}
-                  type="button"
-                  onClick={() => toggleCategory(cat.slug)}
-                  className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
-                    selectedCategories.includes(cat.slug)
-                      ? "bg-cyan-600 text-white"
-                      : "bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300"
-                  }`}
-                >
-                  {cat.nameBn}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-3 rounded-lg border border-slate-200 p-4 dark:border-slate-700">
-            <p className="text-sm font-medium text-slate-700 dark:text-slate-300">
-              কোন নোটিফিকেশন চান?
-            </p>
-            {[
-              { id: "new_jobs", label: "নতুন চাকরি পোস্ট হলে" },
-              { id: "deadline", label: "আবেদনের শেষ তারিখ ৩ দিন আগে" },
-              { id: "exam", label: "পরীক্ষার তারিখ ৩ দিন আগে" },
-            ].map((opt) => (
-              <label key={opt.id} className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  defaultChecked
-                  className="h-4 w-4 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500"
-                />
-                <span className="text-sm text-slate-600 dark:text-slate-400">
-                  {opt.label}
-                </span>
-              </label>
+      <div className="mx-auto max-w-2xl">
+        <PageHeader
+          icon="🔔"
+          title={{ bn: "নোটিফিকেশন", en: "Notifications" }}
+          intro={{
+            bn: "মোবাইল অ্যাপের পুশ নোটিফিকেশন তৈরি হচ্ছে। চালু হলে এখানে জানানো হবে।",
+            en: "Push notifications through the mobile app are being built. This page will say when they go live.",
+          }}
+        />
+        <div className="rounded-xl border border-l-4 border-slate-200 border-l-brand-500 bg-white p-6 dark:border-navy-700 dark:bg-navy-800">
+          <h2 className="mb-3 font-semibold text-navy-900 dark:text-white">
+            <T bn="যেসব নোটিফিকেশন আসবে" en="What you'll be notified about" />
+          </h2>
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            {PLANNED.map((p) => (
+              <li key={p.en} className="flex gap-2">
+                <span className="text-brand-600">✓</span>
+                <T bn={p.bn} en={p.en} />
+              </li>
             ))}
-          </div>
-
-          <button
-            type="submit"
-            className="w-full rounded-xl bg-cyan-600 py-3 text-sm font-semibold text-white shadow transition hover:bg-cyan-700"
-          >
-            সাবস্ক্রাইব করুন — বিনামূল্যে
-          </button>
-        </form>
+          </ul>
+        </div>
+        <div className="mt-6 rounded-xl bg-navy-50 p-5 text-sm text-navy-800 dark:bg-navy-800 dark:text-slate-200">
+          <T
+            bn={<>ততদিন পর্যন্ত এই সাইটটি বুকমার্ক করে রাখুন — তথ্য প্রতি ৪ ঘণ্টায় আপডেট হয়। <Link href="/jobs" className="font-medium text-brand-700 underline dark:text-brand-300">সব সুযোগ দেখুন →</Link></>}
+            en={<>Until then, bookmark this site — it updates every 4 hours. <Link href="/jobs" className="font-medium text-brand-700 underline dark:text-brand-300">See all opportunities →</Link></>}
+          />
+        </div>
       </div>
     </div>
   );

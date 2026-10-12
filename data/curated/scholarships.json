@@ -1,112 +1,277 @@
 [
  {
   "name": "Commonwealth Master's / PhD Scholarship",
-  "country": "যুক্তরাজ্য",
-  "level": "মাস্টার্স, পিএইচডি",
   "url": "https://cscuk.fcdo.gov.uk/scholarships/",
-  "usualWindow": "বাংলাদেশে UGC-র মাধ্যমে মনোনয়ন; সাধারণত বছরের শেষ দিকে বিজ্ঞপ্তি",
-  "status": "প্রতি বছর — UGC নোটিশ দেখুন",
-  "nursingFit": "নির্দিষ্ট বিশ্ববিদ্যালয় ও প্রোগ্রাম উন্নয়ন-থিমের সাথে মিলতে হবে (পাবলিক হেলথ/নার্সিং)",
+  "country": {
+   "bn": "যুক্তরাজ্য",
+   "en": "United Kingdom"
+  },
+  "level": {
+   "bn": "মাস্টার্স, পিএইচডি",
+   "en": "Master's, PhD"
+  },
+  "usualWindow": {
+   "bn": "বাংলাদেশে UGC-র মাধ্যমে মনোনয়ন; সাধারণত বছরের শেষ দিকে বিজ্ঞপ্তি",
+   "en": "Nominated via UGC in Bangladesh; call usually late in the year"
+  },
+  "status": {
+   "bn": "প্রতি বছর — UGC নোটিশ দেখুন",
+   "en": "Every year — watch UGC notices"
+  },
+  "nursingFit": {
+   "bn": "নির্দিষ্ট বিশ্ববিদ্যালয় ও প্রোগ্রাম উন্নয়ন-থিমের সাথে মিলতে হবে (পাবলিক হেলথ/নার্সিং)",
+   "en": "University and programme must match a development theme (public health / nursing)"
+  },
   "note": "বাংলাদেশের ধাপ: https://ugc.gov.bd/service-details/commonwealth-scholarship"
  },
  {
   "name": "Chevening Scholarship",
-  "country": "যুক্তরাজ্য",
-  "level": "১ বছরের মাস্টার্স",
   "url": "https://www.chevening.org/scholarship/bangladesh/",
-  "usualWindow": "সাধারণত আগস্ট–নভেম্বর আবেদন",
-  "status": "২০২৭–২৮ চক্র ১২-১০-২০২৬ তারিখে বন্ধ দেখা গেছে",
-  "nursingFit": "MSc Nursing/Public Health সম্ভব; কমপক্ষে ২ বছরের কাজের অভিজ্ঞতা লাগে; ক্লিনিক্যাল কোর্সে সীমাবদ্ধতা যাচাই করুন",
+  "country": {
+   "bn": "যুক্তরাজ্য",
+   "en": "United Kingdom"
+  },
+  "level": {
+   "bn": "১ বছরের মাস্টার্স",
+   "en": "One-year Master's"
+  },
+  "usualWindow": {
+   "bn": "সাধারণত আগস্ট–নভেম্বর আবেদন",
+   "en": "Usually August–November"
+  },
+  "status": {
+   "bn": "২০২৭–২৮ চক্র ১২-১০-২০২৬ তারিখে বন্ধ দেখা গেছে",
+   "en": "2027–28 cycle seen closed on 12 Oct 2026"
+  },
+  "nursingFit": {
+   "bn": "MSc Nursing/Public Health সম্ভব; কমপক্ষে ২ বছরের কাজের অভিজ্ঞতা লাগে; ক্লিনিক্যাল কোর্সে সীমাবদ্ধতা যাচাই করুন",
+   "en": "MSc Nursing/Public Health possible; needs at least 2 years' work experience; check clinical-course restrictions"
+  },
   "note": null
  },
  {
   "name": "Erasmus Mundus Joint Masters",
-  "country": "ইউরোপ",
-  "level": "মাস্টার্স",
   "url": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters",
-  "usualWindow": "প্রোগ্রাম অনুযায়ী, সাধারণত অক্টোবর–জানুয়ারি",
-  "status": "প্রতিটি প্রোগ্রামের নিজস্ব শেষ তারিখ — ক্যাটালগ দেখুন",
-  "nursingFit": "Global/Public Health প্রোগ্রাম আছে; নার্সিং-নির্দিষ্ট প্রোগ্রাম (EMECC) এখনো চালু কিনা যাচাই হয়নি",
+  "country": {
+   "bn": "ইউরোপ",
+   "en": "Europe"
+  },
+  "level": {
+   "bn": "মাস্টার্স",
+   "en": "Master's"
+  },
+  "usualWindow": {
+   "bn": "প্রোগ্রাম অনুযায়ী, সাধারণত অক্টোবর–জানুয়ারি",
+   "en": "Per programme, usually October–January"
+  },
+  "status": {
+   "bn": "প্রতিটি প্রোগ্রামের নিজস্ব শেষ তারিখ — ক্যাটালগ দেখুন",
+   "en": "Each programme has its own deadline — see the catalogue"
+  },
+  "nursingFit": {
+   "bn": "Global/Public Health প্রোগ্রাম আছে; নার্সিং-নির্দিষ্ট প্রোগ্রাম (EMECC) এখনো চালু কিনা যাচাই হয়নি",
+   "en": "Global/Public Health programmes exist; whether the nursing-specific EMECC still runs is unverified"
+  },
   "note": null
  },
  {
   "name": "DAAD Scholarship",
-  "country": "জার্মানি",
-  "level": "মাস্টার্স, পিএইচডি",
   "url": "https://www.daad-bangladesh.org/en/find-funding/scholarship-database/",
-  "usualWindow": "প্রোগ্রাম অনুযায়ী (EPOS সাধারণত আগস্ট–অক্টোবর)",
-  "status": "ডেটাবেসে বর্তমান কল দেখুন",
-  "nursingFit": "Public Health/Health Sciences বেশি উপযোগী; ক্লিনিক্যাল MSc Nursing ধরে নেবেন না",
+  "country": {
+   "bn": "জার্মানি",
+   "en": "Germany"
+  },
+  "level": {
+   "bn": "মাস্টার্স, পিএইচডি",
+   "en": "Master's, PhD"
+  },
+  "usualWindow": {
+   "bn": "প্রোগ্রাম অনুযায়ী (EPOS সাধারণত আগস্ট–অক্টোবর)",
+   "en": "Per programme (EPOS usually August–October)"
+  },
+  "status": {
+   "bn": "ডেটাবেসে বর্তমান কল দেখুন",
+   "en": "See current calls in the database"
+  },
+  "nursingFit": {
+   "bn": "Public Health/Health Sciences বেশি উপযোগী; ক্লিনিক্যাল MSc Nursing ধরে নেবেন না",
+   "en": "Public Health/Health Sciences fit best; don't assume a clinical MSc Nursing"
+  },
   "note": null
  },
  {
   "name": "MEXT (Japanese Government) Research Student",
-  "country": "জাপান",
-  "level": "মাস্টার্স, পিএইচডি (রিসার্চ)",
   "url": "https://www.bd.emb-japan.go.jp/itpr_ja/00_000706.html",
-  "usualWindow": "দূতাবাসের মাধ্যমে, সাধারণত এপ্রিল–মে",
-  "status": "২০২৭ চক্র বন্ধ (১২-১০-২০২৬)",
-  "nursingFit": "আগের বিষয় বা সম্পর্কিত বিষয়ে গবেষণা; সুপারভাইজার মেলাতে হবে",
+  "country": {
+   "bn": "জাপান",
+   "en": "Japan"
+  },
+  "level": {
+   "bn": "মাস্টার্স, পিএইচডি (রিসার্চ)",
+   "en": "Master's, PhD (research)"
+  },
+  "usualWindow": {
+   "bn": "দূতাবাসের মাধ্যমে, সাধারণত এপ্রিল–মে",
+   "en": "Through the Embassy, usually April–May"
+  },
+  "status": {
+   "bn": "২০২৭ চক্র বন্ধ (১২-১০-২০২৬)",
+   "en": "2027 cycle closed (12 Oct 2026)"
+  },
+  "nursingFit": {
+   "bn": "আগের বিষয় বা সম্পর্কিত বিষয়ে গবেষণা; সুপারভাইজার মেলাতে হবে",
+   "en": "Research in your previous or a related field; a supervisor match is needed"
+  },
   "note": null
  },
  {
   "name": "Australia Awards",
-  "country": "অস্ট্রেলিয়া",
-  "level": "মাস্টার্স",
   "url": "https://australiaawardsbangladesh.org/",
-  "usualWindow": "সাধারণত ফেব্রুয়ারি–এপ্রিল",
-  "status": "২০২৭-এর শুরুতে আবার খোলার কথা",
-  "nursingFit": "চলতি বছরের অগ্রাধিকার-ক্ষেত্রে স্বাস্থ্য আছে কিনা দেখুন",
+  "country": {
+   "bn": "অস্ট্রেলিয়া",
+   "en": "Australia"
+  },
+  "level": {
+   "bn": "মাস্টার্স",
+   "en": "Master's"
+  },
+  "usualWindow": {
+   "bn": "সাধারণত ফেব্রুয়ারি–এপ্রিল",
+   "en": "Usually February–April"
+  },
+  "status": {
+   "bn": "২০২৭-এর শুরুতে আবার খোলার কথা",
+   "en": "Expected to reopen early 2027"
+  },
+  "nursingFit": {
+   "bn": "চলতি বছরের অগ্রাধিকার-ক্ষেত্রে স্বাস্থ্য আছে কিনা দেখুন",
+   "en": "Check whether health is a priority field this year"
+  },
   "note": null
  },
  {
   "name": "Stipendium Hungaricum",
-  "country": "হাঙ্গেরি",
-  "level": "স্নাতক, মাস্টার্স, পিএইচডি",
   "url": "https://stipendiumhungaricum.hu/",
-  "usualWindow": "সাধারণত ডিসেম্বরের মাঝামাঝি বিজ্ঞপ্তি, জানুয়ারির মাঝামাঝি শেষ",
-  "status": "পরবর্তী কল এখনো প্রকাশিত হয়নি",
-  "nursingFit": "বাংলাদেশ পার্টনার দেশ; শিক্ষা মন্ত্রণালয় মনোনয়ন দেয়; প্রোগ্রাম তালিকায় নার্সিং/হেলথ দেখুন",
+  "country": {
+   "bn": "হাঙ্গেরি",
+   "en": "Hungary"
+  },
+  "level": {
+   "bn": "স্নাতক, মাস্টার্স, পিএইচডি",
+   "en": "Bachelor's, Master's, PhD"
+  },
+  "usualWindow": {
+   "bn": "সাধারণত ডিসেম্বরের মাঝামাঝি বিজ্ঞপ্তি, জানুয়ারির মাঝামাঝি শেষ",
+   "en": "Call usually mid-December, deadline mid-January"
+  },
+  "status": {
+   "bn": "পরবর্তী কল এখনো প্রকাশিত হয়নি",
+   "en": "Next call not published yet"
+  },
+  "nursingFit": {
+   "bn": "বাংলাদেশ পার্টনার দেশ; শিক্ষা মন্ত্রণালয় মনোনয়ন দেয়; প্রোগ্রাম তালিকায় নার্সিং/হেলথ দেখুন",
+   "en": "Bangladesh is a partner country; the Ministry of Education nominates; look for nursing/health programmes"
+  },
   "note": "শিক্ষা মন্ত্রণালয়ের বৃত্তি নোটিশ: https://shed.gov.bd/pages/moedu-scholarships"
  },
  {
   "name": "Global Korea Scholarship (GKS)",
-  "country": "দক্ষিণ কোরিয়া",
-  "level": "মাস্টার্স, পিএইচডি",
   "url": "https://bd.mofa.go.kr/bd-en/brd/m_2124/view.do?seq=760090",
-  "usualWindow": "দূতাবাস-ট্র্যাক সাধারণত ফেব্রুয়ারি–মার্চ",
-  "status": "২০২৬ কল শেষ; ২০২৭ কলের অপেক্ষা",
-  "nursingFit": "বিশ্ববিদ্যালয়ের তালিকায় নার্সিং/হেলথ বিভাগ আছে কিনা দেখুন",
+  "country": {
+   "bn": "দক্ষিণ কোরিয়া",
+   "en": "South Korea"
+  },
+  "level": {
+   "bn": "মাস্টার্স, পিএইচডি",
+   "en": "Master's, PhD"
+  },
+  "usualWindow": {
+   "bn": "দূতাবাস-ট্র্যাক সাধারণত ফেব্রুয়ারি–মার্চ",
+   "en": "Embassy track usually February–March"
+  },
+  "status": {
+   "bn": "২০২৬ কল শেষ; ২০২৭ কলের অপেক্ষা",
+   "en": "2026 call over; waiting for 2027"
+  },
+  "nursingFit": {
+   "bn": "বিশ্ববিদ্যালয়ের তালিকায় নার্সিং/হেলথ বিভাগ আছে কিনা দেখুন",
+   "en": "Check the university list for nursing/health departments"
+  },
   "note": null
  },
  {
   "name": "Fulbright Foreign Student Program",
-  "country": "যুক্তরাষ্ট্র",
-  "level": "মাস্টার্স, পিএইচডি",
   "url": "https://foreign.fulbrightonline.org/about/foreign-student-program?country=bangladesh",
-  "usualWindow": "দেশভিত্তিক — বার্ষিক",
-  "status": "বর্তমান চক্র যাচাই করুন",
-  "nursingFit": "গ্র্যাজুয়েট/রিসার্চ ক্ষেত্র অনুযায়ী",
+  "country": {
+   "bn": "যুক্তরাষ্ট্র",
+   "en": "USA"
+  },
+  "level": {
+   "bn": "মাস্টার্স, পিএইচডি",
+   "en": "Master's, PhD"
+  },
+  "usualWindow": {
+   "bn": "দেশভিত্তিক — বার্ষিক",
+   "en": "Country-specific, yearly"
+  },
+  "status": {
+   "bn": "বর্তমান চক্র যাচাই করুন",
+   "en": "Check the current cycle"
+  },
+  "nursingFit": {
+   "bn": "গ্র্যাজুয়েট/রিসার্চ ক্ষেত্র অনুযায়ী",
+   "en": "Depends on graduate/research field"
+  },
   "note": null
  },
  {
   "name": "Türkiye Bursları",
-  "country": "তুরস্ক",
-  "level": "স্নাতক, মাস্টার্স, পিএইচডি",
   "url": "https://www.turkiyeburslari.gov.tr/",
-  "usualWindow": "সাধারণত জানুয়ারি–ফেব্রুয়ারি",
-  "status": "বার্ষিক",
-  "nursingFit": "নার্সিং/পাবলিক হেলথ প্রোগ্রাম ও ভাষার শর্ত দেখুন",
+  "country": {
+   "bn": "তুরস্ক",
+   "en": "Türkiye"
+  },
+  "level": {
+   "bn": "স্নাতক, মাস্টার্স, পিএইচডি",
+   "en": "Bachelor's, Master's, PhD"
+  },
+  "usualWindow": {
+   "bn": "সাধারণত জানুয়ারি–ফেব্রুয়ারি",
+   "en": "Usually January–February"
+  },
+  "status": {
+   "bn": "বার্ষিক",
+   "en": "Yearly"
+  },
+  "nursingFit": {
+   "bn": "নার্সিং/পাবলিক হেলথ প্রোগ্রাম ও ভাষার শর্ত দেখুন",
+   "en": "Check nursing/public-health programmes and language rules"
+  },
   "note": null
  },
  {
   "name": "Chinese Government Scholarship (CSC)",
-  "country": "চীন",
-  "level": "মাস্টার্স, পিএইচডি",
   "url": "https://www.campuschina.org/",
-  "usualWindow": "সাধারণত জানুয়ারি–এপ্রিল (শিক্ষা মন্ত্রণালয় / বিশ্ববিদ্যালয় ট্র্যাক)",
-  "status": "বার্ষিক",
-  "nursingFit": "নির্দিষ্ট বিশ্ববিদ্যালয়ের নার্সিং প্রোগ্রাম মেলাতে হবে",
+  "country": {
+   "bn": "চীন",
+   "en": "China"
+  },
+  "level": {
+   "bn": "মাস্টার্স, পিএইচডি",
+   "en": "Master's, PhD"
+  },
+  "usualWindow": {
+   "bn": "সাধারণত জানুয়ারি–এপ্রিল (শিক্ষা মন্ত্রণালয় / বিশ্ববিদ্যালয় ট্র্যাক)",
+   "en": "Usually January–April (Ministry of Education / university track)"
+  },
+  "status": {
+   "bn": "বার্ষিক",
+   "en": "Yearly"
+  },
+  "nursingFit": {
+   "bn": "নির্দিষ্ট বিশ্ববিদ্যালয়ের নার্সিং প্রোগ্রাম মেলাতে হবে",
+   "en": "Match a specific university's nursing programme"
+  },
   "note": null
  }
 ]

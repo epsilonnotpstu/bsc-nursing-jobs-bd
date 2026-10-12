@@ -1,12 +1,14 @@
 "use client";
 
+import { T } from "@/lib/i18n";
+
 export default function ShareButtons({ title, url }: { title: string; url: string }) {
   const encodedTitle = encodeURIComponent(title);
   const encodedUrl = encodeURIComponent(url);
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-sm text-slate-500">শেয়ার করুন:</span>
+      <span className="text-sm text-slate-500"><T bn="শেয়ার করুন:" en="Share:" /></span>
       <a
         href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
         target="_blank"

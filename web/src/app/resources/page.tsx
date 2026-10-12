@@ -1,50 +1,47 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import PageHeader from "@/components/layout/PageHeader";
+import { T, type Bi } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "রিসোর্স — পরীক্ষার প্রস্তুতি",
-  description: "নার্সিং পরীক্ষার প্রশ্নব্যাংক, স্টাডি ম্যাটেরিয়াল, DGHS ও BCS পরীক্ষার প্রস্তুতি।",
+  title: "পরীক্ষার প্রস্তুতি · Exam preparation",
+  description: "নার্সিং নিয়োগ পরীক্ষার প্রস্তুতি ও ক্যারিয়ার গাইড। Preparation and career guides for nursing exams.",
 };
 
-const RESOURCE_SECTIONS = [
+const RESOURCE_SECTIONS: { title: Bi; icon: string; items: Bi[] }[] = [
   {
-    title: "পরীক্ষার প্রশ্নব্যাংক",
+    title: { bn: "পরীক্ষার প্রশ্নব্যাংক", en: "Question banks" },
     icon: "📝",
     items: [
-      "DGHS সিনিয়র স্টাফ নার্স নিয়োগ পরীক্ষা (২০১৮-২০২৬)",
-      "BCS Health Cadre প্রশ্নব্যাংক",
-      "নার্সিং কলেজ ভর্তি পরীক্ষার প্রশ্ন",
-      "PSC নন-ক্যাডার স্বাস্থ্য পদ পরীক্ষা",
+      { bn: "সিনিয়র স্টাফ নার্স নিয়োগ পরীক্ষা (BPSC/DGNM)", en: "Senior Staff Nurse recruitment exams (BPSC/DGNM)" },
+      { bn: "BNMC লাইসেন্স পরীক্ষা", en: "BNMC licensing exam" },
+      { bn: "পোস্ট বেসিক ও MSN ভর্তি পরীক্ষা", en: "Post-basic and MSN admission tests" },
     ],
   },
   {
-    title: "স্টাডি ম্যাটেরিয়াল",
+    title: { bn: "স্টাডি ম্যাটেরিয়াল", en: "Study material" },
     icon: "📚",
     items: [
-      "Anatomy & Physiology সংক্ষিপ্ত নোট",
-      "Pharmacology গুরুত্বপূর্ণ ওষুধের তালিকা",
-      "Nursing Fundamentals MCQ ব্যাংক",
-      "Community Health Nursing গাইড",
+      { bn: "Anatomy & Physiology সংক্ষিপ্ত নোট", en: "Anatomy & Physiology short notes" },
+      { bn: "Pharmacology গুরুত্বপূর্ণ ওষুধ", en: "Key Pharmacology drugs" },
+      { bn: "Nursing Fundamentals MCQ", en: "Nursing Fundamentals MCQs" },
     ],
   },
   {
-    title: "বিদেশে নার্সিং — প্রস্তুতি গাইড",
+    title: { bn: "বিদেশে নার্সিং — প্রস্তুতি", en: "Nursing abroad — preparation" },
     icon: "🌍",
     items: [
-      "IELTS প্রস্তুতি গাইড (নার্সদের জন্য)",
-      "OET (Occupational English Test) টিপস",
-      "NCLEX-RN প্রস্তুতি (USA/Canada)",
-      "UK NMC রেজিস্ট্রেশন প্রক্রিয়া",
+      { bn: "IELTS / OET (নার্সদের জন্য)", en: "IELTS / OET for nurses" },
+      { bn: "UK NMC: CBT ও OSCE", en: "UK NMC: CBT and OSCE" },
+      { bn: "মধ্যপ্রাচ্যের লাইসেন্স (Prometric, DataFlow)", en: "Middle East licensing (Prometric, DataFlow)" },
     ],
   },
   {
-    title: "ক্যারিয়ার গাইড",
+    title: { bn: "ক্যারিয়ার গাইড", en: "Career guides" },
     icon: "💼",
     items: [
-      "সরকারি নার্সিং চাকরির আবেদন প্রক্রিয়া",
-      "নার্সিং পেশায় বেতন কাঠামো (২০২৬)",
-      "MSc in Nursing — কোথায় পড়বেন",
-      "নার্সিং গবেষণার সুযোগ",
+      { bn: "সরকারি নার্সিং চাকরির আবেদন প্রক্রিয়া", en: "How to apply for government nursing jobs" },
+      { bn: "নার্সিং শিক্ষক হওয়ার পথ (PGCNET, MSN)", en: "Becoming a nursing teacher (PGCNET, MSN)" },
+      { bn: "NGO ও জাতিসংঘে নার্সিং ক্যারিয়ার", en: "Nursing careers in NGOs and the UN" },
     ],
   },
 ];
@@ -53,50 +50,24 @@ export default function ResourcesPage() {
   return (
     <div className="px-4 py-8">
       <div className="mx-auto max-w-7xl">
-        <nav className="mb-6 text-sm text-slate-500">
-          <Link href="/" className="hover:text-cyan-600">হোম</Link>
-          <span className="mx-2">/</span>
-          <span className="text-slate-900 dark:text-slate-100">রিসোর্স</span>
-        </nav>
-
-        <h1 className="mb-2 text-2xl font-bold text-slate-900 dark:text-slate-100">
-          রিসোর্স ও পরীক্ষার প্রস্তুতি
-        </h1>
-        <p className="mb-8 text-slate-500 dark:text-slate-400">
-          নার্সিং পরীক্ষার প্রস্তুতি, প্রশ্নব্যাংক, স্টাডি ম্যাটেরিয়াল ও ক্যারিয়ার গাইড
-        </p>
-
-        <div className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-6 dark:border-amber-900 dark:bg-amber-900/20">
-          <p className="text-sm text-amber-800 dark:text-amber-300">
-            ⚠️ এই সেকশনটি শীঘ্রই আপডেট হবে। প্রশ্নব্যাংক ও স্টাডি ম্যাটেরিয়াল যোগ করা হচ্ছে।
-            নোটিফিকেশন পেতে{" "}
-            <Link href="/subscribe" className="font-medium underline">
-              সাবস্ক্রাইব করুন
-            </Link>
-            ।
-          </p>
-        </div>
-
+        <PageHeader
+          title={{ bn: "পরীক্ষার প্রস্তুতি ও গাইড", en: "Exam preparation & guides" }}
+          intro={{ bn: "এই সেকশনটি তৈরি হচ্ছে — নিচের বিষয়গুলো শিগগিরই যোগ হবে।", en: "This section is being built — the topics below are coming soon." }}
+        />
         <div className="grid gap-6 sm:grid-cols-2">
           {RESOURCE_SECTIONS.map((section) => (
-            <div
-              key={section.title}
-              className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800"
-            >
-              <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-slate-100">
+            <div key={section.title.en} className="rounded-xl border border-slate-200 bg-white p-6 dark:border-navy-700 dark:bg-navy-800">
+              <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-navy-900 dark:text-white">
                 <span>{section.icon}</span>
-                {section.title}
+                <T bn={section.title.bn} en={section.title.en} />
               </h2>
               <ul className="space-y-2">
                 {section.items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400"
-                  >
-                    <span className="text-cyan-500">•</span>
-                    {item}
-                    <span className="ml-auto rounded bg-slate-100 px-2 py-0.5 text-xs text-slate-400 dark:bg-slate-700">
-                      শীঘ্রই
+                  <li key={item.en} className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+                    <span className="text-brand-500">•</span>
+                    <T bn={item.bn} en={item.en} />
+                    <span className="ml-auto shrink-0 rounded bg-slate-100 px-2 py-0.5 text-xs text-slate-400 dark:bg-navy-700">
+                      <T bn="শীঘ্রই" en="Soon" />
                     </span>
                   </li>
                 ))}

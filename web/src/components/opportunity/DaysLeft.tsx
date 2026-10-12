@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { daysLeft, daysLeftColor, daysLeftLabel } from "@/lib/utils";
+import { useLang } from "@/lib/useLang";
+import { daysLeft, daysLeftColor, daysLeftLabel, daysLeftLabelEn } from "@/lib/utils";
 
 /** Computed in the browser so prerendered pages never show a stale count. */
-export default function DaysLeft({ date, prefix }: { date: string | null; prefix?: string }) {
+export default function DaysLeft({ date }: { date: string | null }) {
+  const lang = useLang();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   if (!date) return <span className="text-xs text-slate-400">—</span>;
@@ -12,8 +14,7 @@ export default function DaysLeft({ date, prefix }: { date: string | null; prefix
   const days = daysLeft(date);
   return (
     <span className={`text-xs font-semibold ${daysLeftColor(days)}`}>
-      {prefix}
-      {daysLeftLabel(days)}
+      {lang === "en" ? daysLeftLabelEn(days) : daysLeftLabel(days)}
     </span>
   );
 }

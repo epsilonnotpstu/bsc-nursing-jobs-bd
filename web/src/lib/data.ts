@@ -10,14 +10,16 @@ const file = opportunitiesJson as unknown as OpportunitiesFile;
 export const generatedAt: string = file.generatedAt;
 export const sourceHealth = healthJson as SourceHealth[];
 
+type BiText = { bn: string; en: string };
+
 export interface Scholarship {
   name: string;
-  country: string;
-  level: string;
   url: string;
-  usualWindow: string;
-  status: string;
-  nursingFit: string;
+  country: BiText;
+  level: BiText;
+  usualWindow: BiText;
+  status: BiText;
+  nursingFit: BiText;
   note: string | null;
 }
 

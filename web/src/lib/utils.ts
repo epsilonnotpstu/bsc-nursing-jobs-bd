@@ -20,6 +20,12 @@ export function formatBanglaDate(dateStr: string): string {
   return `${day} ${month} ${year}`;
 }
 
+export function formatEnglishDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) return dateStr;
+  return date.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+}
+
 export function daysLeft(dateStr: string | null): number | null {
   if (!dateStr) return null;
   const target = new Date(dateStr);
@@ -38,12 +44,20 @@ export function daysLeftLabel(days: number | null): string {
   return `${toBanglaDigits(days)} দিন বাকি`;
 }
 
+export function daysLeftLabelEn(days: number | null): string {
+  if (days === null) return "Date unknown";
+  if (days < 0) return "Closed";
+  if (days === 0) return "Last day today!";
+  if (days === 1) return "Ends tomorrow!";
+  return `${days} days left`;
+}
+
 export function daysLeftColor(days: number | null): string {
   if (days === null) return "text-gray-400";
   if (days < 0) return "text-gray-400";
   if (days <= 3) return "text-red-600";
   if (days <= 7) return "text-orange-500";
-  return "text-green-600";
+  return "text-brand-600";
 }
 
 export function cn(...classes: (string | false | null | undefined)[]): string {

@@ -1,44 +1,53 @@
 import Link from "next/link";
+import { Logo } from "@/components/layout/Header";
+import { T } from "@/lib/i18n";
 
-const CATEGORY_LINKS = [
-  { href: "/category/govt-health", label: "সরকারি চাকরি" },
-  { href: "/category/clinic", label: "ক্লিনিক ও জেলা হাসপাতাল" },
-  { href: "/category/private-hospital", label: "হাসপাতাল" },
-  { href: "/category/diagnostic", label: "ডায়াগনস্টিক সেন্টার" },
-  { href: "/category/teaching", label: "শিক্ষক নিয়োগ" },
-  { href: "/scholarships", label: "স্কলারশিপ" },
+const SECTION_LINKS = [
+  { href: "/category/govt-health", bn: "সরকারি চাকরি", en: "Government jobs" },
+  { href: "/category/private-hospital", bn: "বড় হাসপাতাল", en: "Major hospitals" },
+  { href: "/category/clinic", bn: "ক্লিনিক ও জেলা হাসপাতাল", en: "Clinics & district hospitals" },
+  { href: "/category/teaching", bn: "শিক্ষক নিয়োগ", en: "Teaching jobs" },
+  { href: "/category/ngo-un", bn: "NGO ও জাতিসংঘ", en: "NGO & UN" },
+  { href: "/category/abroad-jobs", bn: "বিদেশে চাকরি", en: "Jobs abroad" },
+  { href: "/scholarships", bn: "স্কলারশিপ", en: "Scholarships" },
 ];
+
+const USEFUL_LINKS = [
+  { href: "/exams", bn: "পরীক্ষা ও ফলাফল", en: "Exams & results" },
+  { href: "/resources", bn: "পরীক্ষার প্রস্তুতি", en: "Exam preparation" },
+  { href: "/subscribe", bn: "নোটিফিকেশন", en: "Notifications" },
+  { href: "/sources", bn: "তথ্যের উৎস", en: "Data sources" },
+  { href: "/about", bn: "আমাদের সম্পর্কে", en: "About" },
+];
+
+const linkClass = "text-sm text-slate-300 hover:text-brand-300";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900">
+    <footer className="mt-auto bg-navy-900 text-slate-300">
       <div className="mx-auto max-w-7xl px-4 py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="mb-3 flex items-center gap-2">
-              <span className="text-2xl">🏥</span>
-              <span className="text-lg font-bold text-cyan-700 dark:text-cyan-400">
-                নার্সিং জবস BD
-              </span>
+            <div className="mb-3 [&_span]:!text-white">
+              <Logo />
             </div>
-            <p className="text-sm text-slate-500 dark:text-slate-400">
-              বাংলাদেশের সকল নার্সিং চাকরির খবর এক জায়গায়। সরকারি, বেসরকারি,
-              হাসপাতাল, স্কলারশিপ — সব তথ্য স্বয়ংক্রিয়ভাবে আপডেট হয়।
+            <p className="text-sm text-slate-400">
+              <T
+                bn="BSc নার্সদের চাকরি, পরীক্ষা, ফলাফল ও স্কলারশিপ — অফিশিয়াল উৎস থেকে স্বয়ংক্রিয়ভাবে সংগ্রহ করা।"
+                en="Jobs, exams, results and scholarships for BSc nurses — collected automatically from official sources."
+              />
             </p>
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-slate-100">
-              ক্যাটাগরি
+            <h3 className="mb-3 text-sm font-semibold text-white">
+              <T bn="সেকশন" en="Sections" />
             </h3>
             <ul className="space-y-2">
-              {CATEGORY_LINKS.map((link) => (
+              {SECTION_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400"
-                  >
-                    {link.label}
+                  <Link href={link.href} className={linkClass}>
+                    <T bn={link.bn} en={link.en} />
                   </Link>
                 </li>
               ))}
@@ -46,50 +55,35 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-slate-100">
-              গুরুত্বপূর্ণ লিংক
+            <h3 className="mb-3 text-sm font-semibold text-white">
+              <T bn="গুরুত্বপূর্ণ লিংক" en="Useful links" />
             </h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/resources" className="text-sm text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400">
-                  পরীক্ষার প্রস্তুতি
-                </Link>
-              </li>
-              <li>
-                <Link href="/subscribe" className="text-sm text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400">
-                  নোটিফিকেশন সাবস্ক্রাইব
-                </Link>
-              </li>
-              <li>
-                <Link href="/sources" className="text-sm text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400">
-                  তথ্যের উৎস
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-sm text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400">
-                  আমাদের সম্পর্কে
-                </Link>
-              </li>
+              {USEFUL_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className={linkClass}>
+                    <T bn={link.bn} en={link.en} />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-slate-100">
-              যোগাযোগ
+            <h3 className="mb-3 text-sm font-semibold text-white">
+              <T bn="সতর্কতা" en="Please note" />
             </h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">
-              নতুন চাকরির তথ্য বা ভুল সংশোধনের জন্য আমাদের জানান।
+            <p className="text-sm text-slate-400">
+              <T
+                bn="আবেদনের আগে সবসময় মূল সার্কুলার মিলিয়ে নিন। কেউ টাকা চাইলে বা চাকরির নিশ্চয়তা দিলে সতর্ক থাকুন।"
+                en="Always check the original circular before applying. Be careful if anyone asks for money or guarantees a job."
+              />
             </p>
-            <div className="mt-3 flex gap-3">
-              <span className="text-xl" title="Facebook">📘</span>
-              <span className="text-xl" title="Telegram">📱</span>
-              <span className="text-xl" title="WhatsApp">💬</span>
-            </div>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-slate-200 pt-6 text-center text-sm text-slate-400 dark:border-slate-700">
-          &copy; 2026 নার্সিং জবস BD। সর্বস্বত্ব সংরক্ষিত।
+        <div className="mt-8 border-t border-navy-700 pt-6 text-center text-sm text-slate-400">
+          &copy; 2026 <T bn="নার্সিং জবস BD" en="Nursing Jobs BD" />
         </div>
       </div>
     </footer>
