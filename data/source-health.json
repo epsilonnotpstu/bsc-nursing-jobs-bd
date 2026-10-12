@@ -2,8 +2,8 @@
  {
   "sourceId": "teletalk",
   "name": "Teletalk AllJobs (সরকারি)",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -11,8 +11,8 @@
  {
   "sourceId": "bdjobs",
   "name": "Bdjobs",
-  "lastRunAt": "2026-10-12T09:54:20.572Z",
-  "lastSuccessAt": "2026-10-12T09:54:20.572Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 64,
   "error": null
@@ -20,8 +20,8 @@
  {
   "sourceId": "gov-dgnm",
   "name": "নার্সিং ও মিডওয়াইফারি অধিদপ্তর",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 2,
   "error": null
@@ -29,8 +29,8 @@
  {
   "sourceId": "gov-bnmc",
   "name": "বাংলাদেশ নার্সিং ও মিডওয়াইফারি কাউন্সিল",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 10,
   "error": null
@@ -38,8 +38,8 @@
  {
   "sourceId": "gov-bpsc",
   "name": "বাংলাদেশ সরকারি কর্ম কমিশন",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -47,8 +47,8 @@
  {
   "sourceId": "gov-dghs",
   "name": "স্বাস্থ্য অধিদপ্তর",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -56,8 +56,8 @@
  {
   "sourceId": "gov-hsd",
   "name": "স্বাস্থ্য সেবা বিভাগ",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -65,8 +65,8 @@
  {
   "sourceId": "gov-mefwd",
   "name": "স্বাস্থ্য শিক্ষা ও পরিবার কল্যাণ বিভাগ",
-  "lastRunAt": "2026-10-12T09:54:20.572Z",
-  "lastSuccessAt": "2026-10-12T09:54:20.572Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 1,
   "error": null
@@ -74,8 +74,8 @@
  {
   "sourceId": "gov-dgfp",
   "name": "পরিবার পরিকল্পনা অধিদপ্তর",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -83,8 +83,8 @@
  {
   "sourceId": "gov-bshi",
   "name": "বাংলাদেশ শিশু হাসপাতাল ও ইনস্টিটিউট",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 3,
   "error": null
@@ -92,8 +92,8 @@
  {
   "sourceId": "gov-moha",
   "name": "স্বরাষ্ট্র মন্ত্রণালয়",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -101,8 +101,8 @@
  {
   "sourceId": "gov-railway",
   "name": "বাংলাদেশ রেলওয়ে",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -110,8 +110,8 @@
  {
   "sourceId": "gov-prison",
   "name": "কারা অধিদপ্তর",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -119,8 +119,8 @@
  {
   "sourceId": "gov-bgb",
   "name": "বর্ডার গার্ড বাংলাদেশ",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -128,8 +128,8 @@
  {
   "sourceId": "gov-caab",
   "name": "বেসামরিক বিমান চলাচল কর্তৃপক্ষ",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -137,8 +137,8 @@
  {
   "sourceId": "gov-boesl",
   "name": "বোয়েসেল",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -146,8 +146,8 @@
  {
   "sourceId": "gov-bmet",
   "name": "জনশক্তি, কর্মসংস্থান ও প্রশিক্ষণ ব্যুরো",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 0,
   "error": null
@@ -155,8 +155,8 @@
  {
   "sourceId": "gov-dgnm-orders",
   "name": "নার্সিং ও মিডওয়াইফারি অধিদপ্তর (আদেশ)",
-  "lastRunAt": "2026-10-12T09:37:29.998Z",
-  "lastSuccessAt": "2026-10-12T09:37:29.998Z",
+  "lastRunAt": "2026-10-12T09:59:13.452Z",
+  "lastSuccessAt": "2026-10-12T09:59:13.452Z",
   "ok": true,
   "itemsFound": 1,
   "error": null
