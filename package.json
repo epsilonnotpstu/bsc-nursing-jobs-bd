@@ -1,0 +1,16 @@
+{
+  "name": "bsc-nursing-jobs-bd",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "web",
+    "scraper"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=web",
+    "build": "npm run build --workspace=web",
+    "scrape": "npm run scrape --workspace=scraper",
+    "lint": "npm run lint --workspace=web"
+  }
+}

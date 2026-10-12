@@ -1,0 +1,1244 @@
+{
+ "generated": "2026-10-12",
+ "note": "verified: yes=checked live 2026-10-12; search=web search only; todo=unverified",
+ "categories": [
+  "govt-health",
+  "govt-other",
+  "defence",
+  "private-hospital",
+  "clinic",
+  "diagnostic",
+  "teaching",
+  "ngo-un",
+  "corporate",
+  "homecare-other",
+  "abroad-jobs",
+  "scholarship",
+  "higher-study",
+  "exams-results",
+  "special"
+ ],
+ "sources": [
+  {
+   "id": "teletalk-alljobs",
+   "name": "Teletalk Alljobs (all govt circulars)",
+   "url": "https://alljobs.teletalk.com.bd/api/v1/govt-jobs/list?page={page}&limit=20",
+   "method": "json-api",
+   "categories": [
+    "govt-health",
+    "govt-other",
+    "defence"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "Details: /api/v1/govt-jobs/public-details?id={id}; PDF: https://alljobs.teletalk.com.bd/media/{advertisement_file}. Title shows only first post -> must parse PDF. Fields admit_card/is_result/is_notice for exam tracking."
+  },
+  {
+   "id": "bdjobs",
+   "name": "Bdjobs",
+   "url": "https://api.bdjobs.com/Jobs/api/JobSearch/GetJobSearch?keyword={kw}&pg={page}&rpp=50&isPro=0",
+   "method": "json-api",
+   "categories": [
+    "private-hospital",
+    "clinic",
+    "diagnostic",
+    "teaching",
+    "ngo-un",
+    "corporate",
+    "homecare-other",
+    "abroad-jobs"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "isPro=0 required or data[] is empty. Keywords: nurse, nursing, midwife, midwifery, নার্স. Filter by title relevance (keyword search is loose).",
+   "keywords": [
+    "nurse",
+    "nursing",
+    "midwife",
+    "midwifery",
+    "নার্স"
+   ]
+  },
+  {
+   "id": "govportal-search",
+   "name": "Bangladesh National Portal search",
+   "url": "https://bangladesh.gov.bd/views/search?search={kw}",
+   "method": "html",
+   "categories": [
+    "govt-health",
+    "govt-other",
+    "special",
+    "exams-results"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "Searches across all *.gov.bd offices.",
+   "keywords": [
+    "নার্স",
+    "নার্সিং",
+    "মিডওয়াইফ"
+   ]
+  },
+  {
+   "id": "army-join",
+   "name": "Bangladesh Army recruitment",
+   "url": "https://join.army.mil.bd/",
+   "method": "html",
+   "categories": [
+    "defence"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "AFNS via DSSC circulars; static HTML."
+  },
+  {
+   "id": "bpsc-teletalk",
+   "name": "BPSC Teletalk",
+   "url": "https://bpsc.teletalk.com.bd/",
+   "method": "html",
+   "categories": [
+    "govt-health",
+    "exams-results"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "Broken SSL chain.",
+   "ssl_broken": true
+  },
+  {
+   "id": "linkedin-guest",
+   "name": "LinkedIn guest jobs",
+   "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=nurse&location=Bangladesh&start={offset}",
+   "method": "html",
+   "categories": [
+    "ngo-un",
+    "private-hospital",
+    "corporate"
+   ],
+   "tier": 3,
+   "verified": "yes",
+   "notes": "ToS risk: low volume only."
+  },
+  {
+   "id": "reliefweb",
+   "name": "ReliefWeb Jobs API",
+   "url": "https://api.reliefweb.int/v2/jobs",
+   "method": "json-api",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 3,
+   "verified": "yes",
+   "notes": "Requires approved appname (free request at apidoc.reliefweb.int)."
+  },
+  {
+   "id": "dgfp-teletalk",
+   "name": "DGFP Teletalk",
+   "url": "http://dgfp.teletalk.com.bd/",
+   "method": "html",
+   "categories": [
+    "govt-health"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": ""
+  },
+  {
+   "id": "dgnm-teletalk",
+   "name": "DGNM Teletalk",
+   "url": "https://dgnm.teletalk.com.bd/",
+   "method": "html",
+   "categories": [
+    "govt-health"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": ""
+  },
+  {
+   "id": "dghs-teletalk",
+   "name": "DGHS Teletalk",
+   "url": "http://dghs.teletalk.com.bd/",
+   "method": "html",
+   "categories": [
+    "govt-health"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": ""
+  },
+  {
+   "id": "bnmc-results",
+   "name": "BNMC results/merit",
+   "url": "https://bncdb.bnmc.gov.bd/",
+   "method": "html",
+   "categories": [
+    "exams-results",
+    "higher-study"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": ""
+  },
+  {
+   "id": "dgnm-results",
+   "name": "DGNM results",
+   "url": "https://dgnmpb.teletalk.com.bd/dgnmpb/result.php",
+   "method": "html",
+   "categories": [
+    "exams-results"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": ""
+  },
+  {
+   "id": "bmu-forms",
+   "name": "BMU recruitment forms",
+   "url": "https://forms.bmu.ac.bd/",
+   "method": "html",
+   "categories": [
+    "govt-other",
+    "higher-study"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": ""
+  },
+  {
+   "id": "gov-dgnm",
+   "name": "নার্সিং ও মিডওয়াইফারি অধিদপ্তর",
+   "url": "https://dgnm.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-health",
+    "teaching",
+    "special",
+    "higher-study",
+    "exams-results"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-bnmc",
+   "name": "বাংলাদেশ নার্সিং ও মিডওয়াইফারি কাউন্সিল",
+   "url": "https://bnmc.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "exams-results",
+    "higher-study",
+    "special"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": true
+  },
+  {
+   "id": "gov-bpsc",
+   "name": "বাংলাদেশ সরকারি কর্ম কমিশন",
+   "url": "https://bpsc.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-health",
+    "exams-results"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-dghs",
+   "name": "স্বাস্থ্য অধিদপ্তর",
+   "url": "https://dghs.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-health"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-hsd",
+   "name": "স্বাস্থ্য সেবা বিভাগ",
+   "url": "https://hsd.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-health",
+    "special"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-mefwd",
+   "name": "স্বাস্থ্য শিক্ষা ও পরিবার কল্যাণ বিভাগ",
+   "url": "https://mefwd.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "teaching",
+    "higher-study"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-dgfp",
+   "name": "পরিবার পরিকল্পনা অধিদপ্তর",
+   "url": "https://dgfp.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-health"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": true
+  },
+  {
+   "id": "gov-mohfw",
+   "name": "স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয়",
+   "url": "https://mohfw.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-health"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-bshi",
+   "name": "বাংলাদেশ শিশু হাসপাতাল ও ইনস্টিটিউট",
+   "url": "https://bshi.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-other"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-moha",
+   "name": "স্বরাষ্ট্র মন্ত্রণালয় (পুলিশ হাসপাতাল)",
+   "url": "https://moha.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-other"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-police",
+   "name": "বাংলাদেশ পুলিশ",
+   "url": "https://police.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-other"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-bgb",
+   "name": "বর্ডার গার্ড বাংলাদেশ",
+   "url": "https://bgb.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-other",
+    "defence"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": true
+  },
+  {
+   "id": "gov-prison",
+   "name": "কারা অধিদপ্তর",
+   "url": "https://prison.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-other"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": true
+  },
+  {
+   "id": "gov-railway",
+   "name": "বাংলাদেশ রেলওয়ে",
+   "url": "https://railway.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-other"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-caab",
+   "name": "বেসামরিক বিমান চলাচল কর্তৃপক্ষ",
+   "url": "https://caab.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-other"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": true
+  },
+  {
+   "id": "gov-boesl",
+   "name": "BOESL",
+   "url": "https://boesl.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "abroad-jobs"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": true
+  },
+  {
+   "id": "gov-bmet",
+   "name": "BMET",
+   "url": "https://bmet.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "abroad-jobs"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": true
+  },
+  {
+   "id": "gov-probashi",
+   "name": "প্রবাসী কল্যাণ মন্ত্রণালয়",
+   "url": "https://probashi.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "abroad-jobs"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "gov-dpp",
+   "name": "DPP",
+   "url": "https://dpp.gov.bd/pages/notices",
+   "method": "gov-portal-notices",
+   "categories": [
+    "govt-other"
+   ],
+   "tier": 1,
+   "verified": "yes",
+   "notes": "",
+   "ssl_broken": false
+  },
+  {
+   "id": "career-square",
+   "name": "Square Hospital",
+   "url": "https://www.squarehospital.com/career-select-option",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-evercare-dhaka",
+   "name": "Evercare Dhaka",
+   "url": "https://www.evercarebd.com/en/dhaka/careers",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-evercare-ctg",
+   "name": "Evercare Chattogram",
+   "url": "https://www.evercarebd.com/en/chattogram/careers",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-continental",
+   "name": "Continental Hospital (ex-United)",
+   "url": "https://continental.health/careers",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-bsh",
+   "name": "Bangladesh Specialized Hospital",
+   "url": "https://bdspecializedhospital.com/career",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-ibnsina",
+   "name": "Ibn Sina Trust",
+   "url": "https://career.ibnsinatrust.com",
+   "method": "html-or-browser",
+   "categories": [
+    "diagnostic"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-apollo-imperial",
+   "name": "Apollo Imperial Chattogram",
+   "url": "https://aihlbd.org/career/",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-birdem",
+   "name": "BIRDEM",
+   "url": "https://www.birdembd.org/career",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-thyrocare",
+   "name": "Thyrocare BD",
+   "url": "https://www.thyrocarebd.com/career",
+   "method": "html-or-browser",
+   "categories": [
+    "diagnostic"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-crp",
+   "name": "CRP",
+   "url": "https://www.crp-bangladesh.org/career",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-lamb",
+   "name": "LAMB",
+   "url": "https://www.lambproject.org/job-openings",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-dam",
+   "name": "Dhaka Ahsania Mission",
+   "url": "https://www.ahsaniamission.org.bd/job/",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-brac",
+   "name": "BRAC",
+   "url": "https://careers.brac.net/",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-hi",
+   "name": "Humanity & Inclusion",
+   "url": "https://jobs.hi-bd.org/",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-friendship",
+   "name": "Friendship",
+   "url": "https://www.friendship.ngo/careers",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-stc",
+   "name": "Save the Children",
+   "url": "https://www.savethechildren.net/careers",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-msf",
+   "name": "MSF",
+   "url": "https://www.msf.org/work-msf",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-unfpa",
+   "name": "UNFPA",
+   "url": "https://www.unfpa.org/jobs",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-who",
+   "name": "WHO",
+   "url": "https://careers.who.int",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-unicef",
+   "name": "UNICEF",
+   "url": "https://jobs.unicef.org/",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-unv",
+   "name": "UNV",
+   "url": "https://app.unv.org/",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-unjobs",
+   "name": "UNjobs Bangladesh",
+   "url": "https://unjobs.org/duty_stations/bangladesh",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-jhpiego",
+   "name": "Jhpiego",
+   "url": "https://jhpiego.org/careers/",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-fhi360",
+   "name": "FHI 360",
+   "url": "https://www.fhi360.org/join-our-team/",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-acf",
+   "name": "Action Against Hunger",
+   "url": "https://www.actionagainsthunger.org/careers/",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "yes",
+   "notes": "Career page exists; may need headless browser."
+  },
+  {
+   "id": "career-labaid",
+   "name": "Labaid",
+   "url": "https://www.labaid.com.bd",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "career-popular",
+   "name": "Popular Diagnostic",
+   "url": "https://www.populardiagnostic.com",
+   "method": "html-or-browser",
+   "categories": [
+    "diagnostic"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "career-praava",
+   "name": "Praava Health",
+   "url": "https://www.praavahealth.com",
+   "method": "html-or-browser",
+   "categories": [
+    "diagnostic"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "career-nhf",
+   "name": "National Heart Foundation",
+   "url": "https://www.nhf.org.bd",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "career-kumudini",
+   "name": "Kumudini",
+   "url": "https://www.kumudini.org.bd",
+   "method": "html-or-browser",
+   "categories": [
+    "private-hospital"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "career-icddrb",
+   "name": "icddr,b",
+   "url": "https://www.icddrb.org",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "career-iom",
+   "name": "IOM",
+   "url": "https://www.iom.int/careers",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "career-unhcr",
+   "name": "UNHCR",
+   "url": "https://www.unhcr.org/careers",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "career-rtm",
+   "name": "RTM International",
+   "url": "https://www.rtm-international.org",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "career-irc",
+   "name": "IRC",
+   "url": "https://www.rescue.org",
+   "method": "html-or-browser",
+   "categories": [
+    "ngo-un"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "No career link found on homepage or blocked (403); mostly covered via bdjobs."
+  },
+  {
+   "id": "news-prothomalo",
+   "name": "Prothom Alo Chakri",
+   "url": "https://www.prothomalo.com/chakri",
+   "method": "html",
+   "categories": [
+    "govt-health",
+    "govt-other"
+   ],
+   "tier": 4,
+   "verified": "yes",
+   "notes": "Lead only; link to official source."
+  },
+  {
+   "id": "news-dailycampus",
+   "name": "The Daily Campus",
+   "url": "https://thedailycampus.com",
+   "method": "html",
+   "categories": [
+    "govt-health",
+    "govt-other"
+   ],
+   "tier": 4,
+   "verified": "search",
+   "notes": "Lead only; link to official source."
+  },
+  {
+   "id": "news-ajkerpatrika",
+   "name": "Ajker Patrika Job",
+   "url": "https://www.ajkerpatrika.com/job",
+   "method": "html",
+   "categories": [
+    "govt-health",
+    "govt-other"
+   ],
+   "tier": 4,
+   "verified": "search",
+   "notes": "Lead only; link to official source."
+  },
+  {
+   "id": "blog-bdgovtjob",
+   "name": "bdgovtjob",
+   "url": "https://bdgovtjob.net",
+   "method": "html",
+   "categories": [
+    "govt-health",
+    "govt-other"
+   ],
+   "tier": 5,
+   "verified": "yes",
+   "notes": "Unreliable dates observed; discovery lead only, never display directly."
+  },
+  {
+   "id": "blog-bdjobstoday",
+   "name": "bdjobstoday",
+   "url": "https://www.bdjobstoday.com",
+   "method": "html",
+   "categories": [
+    "govt-health",
+    "govt-other"
+   ],
+   "tier": 5,
+   "verified": "yes",
+   "notes": "Unreliable dates observed; discovery lead only, never display directly."
+  },
+  {
+   "id": "blog-jobsnoticebd",
+   "name": "jobsnoticebd",
+   "url": "https://jobsnoticebd.com",
+   "method": "html",
+   "categories": [
+    "govt-health",
+    "govt-other"
+   ],
+   "tier": 5,
+   "verified": "yes",
+   "notes": "Unreliable dates observed; discovery lead only, never display directly."
+  },
+  {
+   "id": "portal-skilljobs",
+   "name": "skilljobs",
+   "url": "https://skill.jobs",
+   "method": "html",
+   "categories": [
+    "clinic",
+    "homecare-other"
+   ],
+   "tier": 3,
+   "verified": "yes",
+   "notes": ""
+  },
+  {
+   "id": "portal-bikroy",
+   "name": "bikroy",
+   "url": "https://bikroy.com/jobs",
+   "method": "html",
+   "categories": [
+    "clinic",
+    "homecare-other"
+   ],
+   "tier": 3,
+   "verified": "yes",
+   "notes": ""
+  },
+  {
+   "id": "portal-chakri",
+   "name": "chakri",
+   "url": "https://www.chakri.com",
+   "method": "html",
+   "categories": [
+    "clinic",
+    "homecare-other"
+   ],
+   "tier": 3,
+   "verified": "down-2026-10-12",
+   "notes": ""
+  },
+  {
+   "id": "portal-kormo",
+   "name": "kormo",
+   "url": "https://kormo.gov.bd",
+   "method": "html",
+   "categories": [
+    "clinic",
+    "homecare-other"
+   ],
+   "tier": 3,
+   "verified": "down-2026-10-12",
+   "notes": ""
+  },
+  {
+   "id": "abroad-maldives-gazette",
+   "name": "Maldives Gazette (MOH vacancies)",
+   "url": "https://www.gazette.gov.mv/iulaan",
+   "method": "html",
+   "categories": [
+    "abroad-jobs"
+   ],
+   "tier": 3,
+   "verified": "search",
+   "notes": ""
+  },
+  {
+   "id": "abroad-nmc-uk",
+   "name": "UK NMC",
+   "url": "https://www.nmc.org.uk",
+   "method": "html",
+   "categories": [
+    "abroad-jobs"
+   ],
+   "tier": 3,
+   "verified": "todo",
+   "notes": ""
+  },
+  {
+   "id": "abroad-nhs-jobs",
+   "name": "NHS Jobs",
+   "url": "https://www.jobs.nhs.uk",
+   "method": "html",
+   "categories": [
+    "abroad-jobs"
+   ],
+   "tier": 3,
+   "verified": "todo",
+   "notes": ""
+  },
+  {
+   "id": "abroad-ssw-japan",
+   "name": "Japan SSW",
+   "url": "https://www.ssw.go.jp/en/",
+   "method": "html",
+   "categories": [
+    "abroad-jobs"
+   ],
+   "tier": 3,
+   "verified": "search",
+   "notes": ""
+  },
+  {
+   "id": "schol-commonwealth",
+   "name": "Commonwealth Scholarships",
+   "url": "https://cscuk.fcdo.gov.uk",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-chevening",
+   "name": "Chevening",
+   "url": "https://www.chevening.org",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-erasmus",
+   "name": "Erasmus Mundus catalogue",
+   "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-daad",
+   "name": "DAAD database",
+   "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-mext",
+   "name": "MEXT (Embassy of Japan BD)",
+   "url": "https://www.bd.emb-japan.go.jp",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-australia-awards",
+   "name": "Australia Awards SWA",
+   "url": "https://www.australiaawardssouthwestasia.org",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-stipendium",
+   "name": "Stipendium Hungaricum",
+   "url": "https://stipendiumhungaricum.hu",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-gks",
+   "name": "Global Korea Scholarship",
+   "url": "https://www.studyinkorea.go.kr",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-csc",
+   "name": "Chinese Government Scholarship",
+   "url": "https://www.campuschina.org",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-turkiye",
+   "name": "Türkiye Bursları",
+   "url": "https://www.turkiyeburslari.gov.tr",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-fulbright",
+   "name": "Fulbright Bangladesh",
+   "url": "https://bd.usembassy.gov/education-culture/",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-moedu",
+   "name": "Ministry of Education BD (nominated scholarships)",
+   "url": "https://moedu.gov.bd",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-opportunitiescorners",
+   "name": "Opportunities Corners",
+   "url": "https://opportunitiescorners.com",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-wemakescholars",
+   "name": "WeMakeScholars",
+   "url": "https://www.wemakescholars.com",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  },
+  {
+   "id": "schol-mastersportal",
+   "name": "Mastersportal",
+   "url": "https://www.mastersportal.com",
+   "method": "html",
+   "categories": [
+    "scholarship"
+   ],
+   "tier": 2,
+   "verified": "todo",
+   "notes": "Verify URL and Bangladesh eligibility each cycle."
+  }
+ ]
+}

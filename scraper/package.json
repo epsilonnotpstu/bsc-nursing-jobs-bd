@@ -1,0 +1,21 @@
+{
+  "name": "scraper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "NODE_EXTRA_CA_CERTS=./certs/extra-ca.pem tsx --env-file-if-exists=../.env src/run.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@bsc-nursing/shared": "*",
+    "cheerio": "^1.2.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.4.299"
+  }
+}
